@@ -1,0 +1,107 @@
+/* ==========================================================
+   Global Reset & Typography
+========================================================== */
+*,
+*::before,
+*::after {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html { scroll-behavior:smooth; }
+body {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:#f0f4fa;
+    color:#333;
+    line-height:1.6;
+}
+
+/* ==========================================================
+   Hero Section
+========================================================== */
+.hero {
+    text-align:center;
+    padding:80px 20px;
+    background:
+        linear-gradient(135deg,#ff8a00,#e52e71),
+        url('') no-repeat center/cover; /* gambar dihapus – placeholder kosong */
+    color:white;
+}
+.hero h1 { font-size:3rem; margin-bottom:.5rem; }
+.hero p { font-size:1.2rem; }
+
+/* ==========================================================
+   Card (Section Container)
+========================================================== */
+.card {
+    background:#fff;
+    max-width:800px;
+    margin:30px auto;
+    padding:25px 30px;
+    border-radius:15px;
+    box-shadow:
+        0 10px 20px rgba(0,0,0,.1),
+        inset 0 2px 5px rgba(255,255,255,.7);
+    transform:translateY(50px);
+    opacity:0;
+    transition:.6s ease-out;
+}
+.card.fade-in.show { 
+    transform:translateY(0); 
+    opacity:1; 
+}
+
+/* Headings */
+.card h2 { margin-bottom:15px; color:#4a90e2; }
+
+/* ==========================================================
+   Skill List
+========================================================== */
+.skill-list {
+    list-style:none;
+}
+.skill-list li {
+    position:relative;
+    padding-left:30px;
+    margin-bottom:12px;
+    cursor:pointer;
+    font-weight:500;
+}
+.skill-list li::before {
+    content:"";
+    position:absolute;
+    left:0; top:50%;
+    transform:translateY(-50%);
+    width:20px; height:20px;
+    border-radius:50%;
+    background:#4a90e2;
+}
+.skill-list li:hover { color:#e52e71; }
+
+/* ==========================================================
+   Timeline
+========================================================== */
+#timeline ol {
+    list-style-position:inside;
+    padding-left:0;
+}
+#timeline li::marker { color:#4a90e2; font-weight:bold; }
+
+/* ==========================================================
+   Footer
+========================================================== */
+.footer {
+    text-align:center;
+    padding:15px 20px;
+    background:#4a90e2;
+    color:white;
+    margin-top:50px;
+}
+
+/* ==========================================================
+   Responsiveness
+========================================================== */
+@media (max-width:600px) {
+    .hero h1 { font-size:2.3rem; }
+    .card { padding:20px 15px; }
+}
